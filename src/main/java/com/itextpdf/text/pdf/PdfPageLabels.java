@@ -180,9 +180,10 @@ public class PdfPageLabels {
 
 		int pagecount = 1;
 		Integer current;
+                String prefix;
 		char type = 'D';
 		for (int i = 0; i < n; i++) {
-                        String prefix = "";
+                        prefix = "";
 			current = Integer.valueOf(i);
 			if (numberTree.containsKey(current)) {
 				PdfDictionary d = (PdfDictionary)PdfReader.getPdfObjectRelease(numberTree.get(current));
